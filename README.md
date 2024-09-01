@@ -32,6 +32,7 @@ En cuestiones de seguridad:
 
 # Comentarios Adicionales
 Este proyecto fue desarrollado en un entorno Linux, lo que hizo que la instalación de Odoo fuera bastante sencilla. Sin embargo, como una propuesta, considero que sería beneficioso crear un tutorial para instalar Odoo utilizando Docker. Esta metodología podría simplificar el proceso de instalación y configuración en distintos entornos, y sería una excelente adición en futuras entrevistas o proyectos.
+He de mencionar que, además de los recursos compartidos, también me he apoyado de tutoriales en internet (reddit, la documentacion de Odoo, etc) y de herramientas como GitHub Copilot
 
 # Dudas
 - ¿Cómo y dónde se realizan los tests dentro de Odoo?
