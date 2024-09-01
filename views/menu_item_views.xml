@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <!-- Menu Principal -->
+        <menuitem name="Escuela" id="school_menu_root" groups="base.group_user" web_icon="challenge,static/description/icon.png"/>
+        
+        <!-- Menu Items -->
+        <menuitem name="Materias" id="school_menu_subject" parent="school_menu_root" action="action_school_subject" groups="group_school_teacher,group_school_manager"/>
+        <menuitem name="Profesores" id="school_menu_teacher" parent="school_menu_root" action="action_school_teacher" groups="group_school_manager"/>
+        <menuitem name="Estudiantes" id="school_menu_student" parent="school_menu_root" action="action_school_student" groups="group_school_manager"/>
+    </data>
+</odoo>

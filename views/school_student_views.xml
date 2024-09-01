@@ -1,0 +1,66 @@
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="view_form_school_student" model="ir.ui.view">
+            <field name="name">school.student.form</field>
+            <field name="model">school.student</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" string="Estudiante"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                            <div class="options_active"></div>
+                            <group>
+                                <field name="birth_date"/>
+                                <field name="final_exam_grade"/>
+                                <field name="age" readonly="1"/>
+                                <!-- Many2many field for Subjects -->
+                                <field name="subject_ids" readonly="1">
+                                    <tree string="Subjects">
+                                        <field name="name"/>
+                                        <field name="credits"/>
+                                        <field name="max_students"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_tree_school_student" model="ir.ui.view">
+            <field name="name">school.student.tree</field>
+            <field name="model">school.student</field>
+            <field name="arch" type="xml">
+                <tree string="Students">
+                    <field name="name"/>
+                    <field name="birth_date"/>
+                    <field name="age"/>
+                    <field name="final_exam_grade"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_school_student" model="ir.actions.act_window">
+            <field name="name">Estudiantes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.student</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Aún no hay estudiantes.
+                </p>
+
+                <p>
+                    Haga clic en Crear para añadir un nuevo estudiante.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>
